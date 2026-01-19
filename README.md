@@ -49,6 +49,6 @@ Then open the URL that appears in the terminal ( `http://localhost:5173`).
 
 ## Live Demo
 
-🔗 Portfolio: my-personal-portfolio-sooty-kappa.vercel.app
+🔗 Portfolio: [my-personal-portfolio-sooty-kappa.vercel.app](https://my-personal-portfolio-sooty-kappa.vercel.app/)
 
 
