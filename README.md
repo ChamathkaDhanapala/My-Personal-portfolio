@@ -5,7 +5,7 @@ This portfolio highlights my projects, skills, and background with a clean UI an
 
 ---
 
-## ✨ Features
+## Features
 
 - Responsive design for all screen sizes
 - Clean and modern UI inspired by UI/UX principles
@@ -15,7 +15,7 @@ This portfolio highlights my projects, skills, and background with a clean UI an
 
 ---
 
-Sections included:
+## Sections included:
 
 - **About Me**
 - **Skills / Tech Stack**
@@ -25,7 +25,7 @@ Sections included:
 
 ---
 
-## 🛠️ Built With
+## Built With
 
 - React (Vite)
 - Modern CSS
@@ -47,5 +47,8 @@ Then open the URL that appears in the terminal ( `http://localhost:5173`).
 
 ---
 
+## Live Demo
+
+🔗 Portfolio: my-personal-portfolio-sooty-kappa.vercel.app
 
 
