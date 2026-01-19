@@ -3,6 +3,9 @@ import './App.css'
 import rideLankaImage from './assets/RideLanka.png'
 import zyraImage from './assets/Zyra.png'
 import fitoraImage from './assets/Fitora.png'
+import syncSphereImage from './assets/SyncSphere.png'
+import medcareImage from './assets/Medcare.png'
+import chamathkaImage from './assets/Chamathka.png'
 
 const ROLES = ['Frontend Developer', 'UI/UX Designer']
 
@@ -12,8 +15,8 @@ const PROJECTS = [
     title: 'SyncSphere',
     description: 'A responsive real-time chat web application with secure authentication and seamless UI-backend communication',
     category: 'Frontend',
-    tags: [' React.js', ' Node.js','Express.js','MongoDB','Socket.io'],
-    image: '',
+    tags: [' React.js', ' Node.js', 'Express.js', 'MongoDB', 'Socket.io'],
+    image: syncSphereImage,
     link: 'https://github.com/ChamathkaDhanapala/SyncSphere---Realtime-chat-app-with-the-MERN-stack.git'
   },
   {
@@ -21,8 +24,8 @@ const PROJECTS = [
     title: ' MedCare',
     description: ' A healthcare management web app with patient and appointment systems.',
     category: 'Academic & Group Projects',
-    tags: ['React.js', 'React Native','Redux','Java','Spring Boot','MySQL','REST APIs'],
-    image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=800&q=80',
+    tags: ['React.js', 'React Native', 'Redux', 'Java', 'Spring Boot', 'MySQL', 'REST APIs'],
+    image: medcareImage,
     link: 'https://github.com/ChamathkaDhanapala/MedCare_App.git'
   },
   {
@@ -40,7 +43,7 @@ const PROJECTS = [
     description: ' a fashion e-commerce website with clean, stylish interface. Focused on creating an elegant, conversion-optimized shopping experience across all key pages.',
     category: 'UI/UX',
     tags: ['Figma'],
-    image: zyraImage ,
+    image: zyraImage,
     link: 'https://www.figma.com/design/42KqBeWVUOZAK87u6hmsv3/Zyra?node-id=5-90&t=XxQnx6svUuq3Fgds-1'
   },
   {
@@ -219,14 +222,17 @@ function App() {
             </div>
           </div>
           <div className="hero-visual">
-            <div className="hero-circle">
-              <div className="hero-photo">
-                <img
-                  src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=500&q=80"
-                  alt="Chamathka Dhanapala portrait"
-                />
+            <div className="hero-image-wrapper">
+              <span className="circle-large"></span>
+              <span className="circle-small"></span>
+
+              <div className="photo-mask">
+                <img src={chamathkaImage} alt="Chamathka Dhanapala" />
+
               </div>
             </div>
+
+
             <div className="hero-tag">
               <span className="tag-dot" />
               Available for opportunities
@@ -234,24 +240,80 @@ function App() {
           </div>
         </section>
 
-        <section id="about" className="section">
+        <section id="about" className="section about">
           <div className="section-header">
-            <h2>About me</h2>
+            <h2>
+              <span className="title-white">ABOUT</span>{" "}
+              <span className="title-blue">ME</span>
+            </h2>
+            <p>A short introduction about me</p>
           </div>
-          <div className="card-grid">
-            <article className="card">
+
+
+          <div className="about-grid">
+          <div className="about-visual">
+  <svg
+    width="120"
+    height="120"
+    viewBox="0 0 120 120"
+    fill="none"
+    className="about-svg"
+  >
+    {/* Window */}
+    <rect
+      x="12"
+      y="18"
+      width="96"
+      height="70"
+      rx="8"
+      stroke="#3b82f6"
+      strokeWidth="2"
+    />
+
+    {/* Top bar dots */}
+    <circle cx="24" cy="30" r="3" fill="#3b82f6" />
+    <circle cx="36" cy="30" r="3" fill="#60a5fa" />
+    <circle cx="48" cy="30" r="3" fill="#93c5fd" />
+
+    {/* Code lines */}
+    <line x1="26" y1="48" x2="78" y2="48" stroke="#3b82f6" strokeWidth="2" />
+    <line x1="26" y1="58" x2="66" y2="58" stroke="#60a5fa" strokeWidth="2" />
+    <line x1="26" y1="68" x2="72" y2="68" stroke="#93c5fd" strokeWidth="2" />
+
+    {/* Cursor */}
+    <rect x="78" y="64" width="6" height="10" fill="#3b82f6">
+      <animate
+        attributeName="opacity"
+        values="1;0;1"
+        dur="1s"
+        repeatCount="indefinite"
+      />
+    </rect>
+  </svg>
+</div>
+
+
+
+            <div className="about-text">
               <p>
-              I’m a motivated Frontend Developer and UI/UX Designer currently pursuing a BSc in Information Technology at the University of Jaffna. I enjoy designing clean, user-friendly interfaces and turning them into responsive web applications using modern frontend technologies like React, JavaScript, HTML, and CSS. I also work with tools such as Figma to create intuitive UI/UX designs that focus on usability and visual clarity.
+                I’m a motivated Frontend Developer and UI/UX Designer currently pursuing a
+                BSc in Information Technology at the University of Jaffna. I enjoy designing
+                clean, user-friendly interfaces and turning them into responsive web
+                applications with a strong focus on usability and visual clarity.
               </p>
-            </article>
-            <article className="card">
-            </article>
+            </div>
           </div>
         </section>
+    
+
 
         <section id="skills" className="section">
           <div className="section-header">
-            <h2 className="skills-title">My Skills</h2>
+            <h2>
+              <span className="title-white">MY</span>{" "}
+              <span className="title-blue">SKILLS</span>
+            </h2>
+            <p>Technologies and design skills I use</p>
           </div>
           <div className="skills-container">
             {Object.entries(SKILLS).map(([category, skills]) => (
@@ -494,7 +556,11 @@ function App() {
 
         <section id="projects" className="section">
           <div className="section-header">
-            <h2>My Projects</h2>
+          <h2>
+              <span className="title-white">MY</span>{" "}
+              <span className="title-blue">PROJECTS</span>
+            </h2>
+            <p>Projects highlighting my skills and creativity</p>
           </div>
           <div className="project-filters">
             {FILTERS.map((filter) => (
@@ -544,8 +610,11 @@ function App() {
 
         <section id="experience" className="section">
           <div className="section-header">
-            <h2>Education</h2>
-            <p>Summary of my journey so far.</p>
+          <h2>
+              <span className="title-white">MY</span>{" "}
+              <span className="title-blue">EDUCATION</span>
+            </h2>
+            <p>Summary of my journey so far</p>
           </div>
           <div className="timeline">
             <div className="timeline-item">
@@ -554,7 +623,7 @@ function App() {
                 <h3>BSc in Information Technology</h3>
                 <p className="timeline-meta">University of Jaffna, Sri Lanka ·  2022–2025</p>
                 <p>
-                Gained a strong foundation in software development, web technologies, and database systems, with hands-on experience in frontend development and UI/UX design through academic projects.
+                  Gained a strong foundation in software development, web technologies, and database systems, with hands-on experience in frontend development and UI/UX design through academic projects.
                 </p>
               </div>
             </div>
@@ -563,8 +632,11 @@ function App() {
 
         <section id="contact" className="section">
           <div className="section-header">
-            <h2>Contact</h2>
-            <p></p>
+          <h2>
+              <span className="title-white">CONTACT</span>{" "}
+              <span className="title-blue">ME</span>
+            </h2>
+            <p>Get in touch with me</p>
           </div>
           <div className="contact-grid">
             <div className="card">
@@ -609,7 +681,7 @@ function App() {
                 const name = e.target.name.value
                 const email = e.target.email.value
                 const message = e.target.message.value
-                
+
                 const subject = encodeURIComponent('Portfolio Contact Form')
                 const body = encodeURIComponent(
                   `Hello Chamathka,\n\n` +
@@ -617,7 +689,7 @@ function App() {
                   `Email: ${email}\n\n` +
                   `Message:\n${message}`
                 )
-                
+
                 window.location.href = `mailto:chamathkasdhanapala@gmail.com?subject=${subject}&body=${body}`
               }}
             >
